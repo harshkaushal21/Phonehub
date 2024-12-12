@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- creating header -->
+     <div class="headertop">
+        <div class="texts">
+            <div class="changingtext">
+                <span class="t1"> FREE DELIVERY, RETURN AND EXCHANGE</span>
+                </div>
+                <a href="" id="imglink"><img src="darrow.png" alt=""></a>
+              </div>
+        </div>
+
+       <div class="bg">
+
+       </div>
+
+       <div class="modal">
+        <div class="center">
+          <img src="ownerimage.jpg" alt="" id="ownerimage">
+          <div class="links">
+            <div class="l1">
+              <a href="" class="insta">instagram</a> <img src="icons8-insta-50.png" alt=""> 
+            </div>
+            <div class="l2">
+              <a href="" class="fb">facebook</a> <img src="icons8-facebook-50 (1).png" alt="">
+            </div>
+           
+          </div>
+          <span id="words">
+           <h1> Hello, I'm Harsh Kaushal</h1><br> a software engineer with a keen interest in [specific area of interest, e.g., full-stack development, artificial intelligence, cybersecurity]. I'm driven by a passion for problem-solving and a desire to create innovative solutions. With a strong foundation in [programming languages or technologies, e.g., Python, JavaScript, React], I strive to write clean, efficient, and maintainable code. I'm excited to contribute to projects that push the boundaries of technology and make a real impact.
+          </span>
+        </div>
+       
+       </div>
+
+
+       <script>
+        $(document).ready(function(){
+         
+          $(".changingtext").click(function(){
+            $(".bg").fadeIn(1000);
+          $(".modal").animate({"top":"40px"},1000);
+          })
+         
+
+
+         $(".bg").click(function(){
+          $(".modal").animate({"top":"-500px"},1000);
+          $(".bg").fadeOut(1000);
+         })
+
+         $("#ownerimage").hover(function(){
+          $(".links").css({"display":"flex"},1000);
+          $(".center ").hover(function(){
+            $(".links").css({"display":"none"});
+          });
+          $(".modal ").hover(function(){
+            $(".links").css({"display":"none"});
+          });
+          $("#words ").hover(function(){
+            $(".links").css({"display":"none"});
+          });
+         })
+
+         $(".links").hover(function(){
+          $(".links").css({"box-shadow":"1px 1px 6px blue"});
+          $(".modal , .links, #words").hover(function(){
+            $(".links").css({"box-shadow":"2px 2px 5px rgba(0, 0, 0, 0.514)"})
+          })
+         })
+
+         $("#ownerimage").click(function(){
+          $("#ownerimage").animate({"box-shadow":"1px 1px 6px blue"})
+         })
+      
+        })
+       </script>
+        
+      
+</body>
+</html>
